@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  {
+    path: 'papaAmarilla',
+    loadChildren: './papaAmarilla/list.module#ListPageModule'
+  },
+  {
+    path: 'papaHuairo',
+    loadChildren: './papaHuairo/list.module#ListPageModule'
+  },
+  {
+    path: 'papaNegra',
+    loadChildren: './papaNegra/list.module#ListPageModule'
   }
 ];
 

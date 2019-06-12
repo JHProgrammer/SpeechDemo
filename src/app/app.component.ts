@@ -19,6 +19,21 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Papa Amarilla',
+      url: '/papaAmarilla',
+      icon: 'list'
+    },
+    {
+      title: 'Papa Huairo',
+      url: '/papaHuairo',
+      icon: 'list'
+    },
+    {
+      title: 'Papa Negra',
+      url: '/papaNegra',
+      icon: 'list'
     }
   ];
 
