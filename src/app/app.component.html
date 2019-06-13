@@ -4,11 +4,20 @@
       <ion-header>
         <ion-toolbar>
           <ion-title>Papas</ion-title>
-          <ion-fab-button><ion-icon name="ios-mic"></ion-icon></ion-fab-button>
+          <ion-fab-button (click)="startListening()"><ion-icon name="ios-mic"></ion-icon></ion-fab-button>
+          <ion-fab-button (click)="stopListening()" ><ion-icon name="ios-mic-off"></ion-icon></ion-fab-button>
+          <ion-fab-button (click)="getPermission()" ><ion-icon name="ios-hand"></ion-icon></ion-fab-button>
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-searchbar placeholder="Buscar..." (ionInput)="getItems($event)"></ion-searchbar>
+          <!-- <ion-list> -->
+              <!-- <ion-item *ngFor="let match of matches">
+                {{ match }}
+              </ion-item> -->
+            <!-- </ion-list> -->
+      
+        <ion-searchbar placeholder="Buscar..."   value="{{ matches[1] }}" (ionInput)="getItems($event)" ></ion-searchbar>
+  
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
